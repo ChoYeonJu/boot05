@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Thymeleaf5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+
+<table border="1" th:inline="text">
+	<tr>
+		<td>MID</td>
+		<td>MNAME</td>
+		<td>REGDATE</td>
+	</tr>
+	
+	<tr th:each="member : ${list}">
+		<td>[[${member.mid}]]</td>
+		<td>[[${member.mname}]]</td>		<!-- 괄호 잘 닫기  -->
+		<td>[[${member.regdate}]]</td>
+	</tr>
+</table>
+
+<script th:inline="javascript">
+
+var result = [[${result}]];
+
+</script>
+
+</body>
+</html>

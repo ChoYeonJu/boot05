@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>thymeleaf3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+
+<div th:insert="~{fragment/header::header}">
+
+</div>
+
+
+<ul>
+	<li><a th:href="@{http://localhost:8080/sample1">sample1</a></li>
+	<li><a th:href="@{/sample1">sample1</a></li>
+	<li><a th:href="@{~/sample1">sample1</a></li>
+</ul>
+
+
+<div th:insert="~{fragment/footer::footer}"></div>
+
+</body>
+
+</html>
